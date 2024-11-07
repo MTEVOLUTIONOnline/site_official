@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>MTevolution</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .fade-in {
+            animation: fadeIn 2s ease-in-out;
+        }
+        .slide-up {
+            animation: slideUp 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        /* Estilos do Popup */
+        .popup-menu {
+            display: none;
+            position: absolute;
+            top: 70px;
+            right: 10px;
+            background-color: #1E3A8A; /* Azul do cabeçalho */
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+        }
+        .popup-menu a {
+            display: block;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            transition: background-color 0.2s ease;
+        }
+        .popup-menu a:hover {
+            background-color: #2563EB;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <!-- Cabeçalho -->
+    <header class="bg-blue-600 text-white fade-in relative">
+        <div class="container mx-auto max-w-screen-xl flex justify-between items-center p-4">
+            <h1 class="text-xl md:text-2xl font-bold">MTevolution</h1>
+            
+            <!-- Botão de Menu para Mobile -->
+            <button class="md:hidden text-white relative" onclick="togglePopup()" id="menuButton">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+            
+            <!-- Links de Navegação para Desktop -->
+            <nav class="hidden md:flex space-x-4 text-sm md:text-base">
+                <a class="hover:underline" href="#home">Início</a>
+                <a class="hover:underline" href="#products">Produtos</a>
+                <a class="hover:underline" href="#services">Serviços</a>
+                <a class="hover:underline" href="#about">Sobre Nós</a>
+                <a class="hover:underline" href="#contact">Contato</a>
+            </nav>
+            
+            <!-- Popup de Navegação para Mobile -->
+            <div class="popup-menu" id="popupMenu">
+                <a href="#home">Início</a>
+                <a href="#products">Produtos</a>
+                <a href="#services">Serviços</a>
+                <a href="#about">Sobre Nós</a>
+                <a href="#contact">Contato</a>
+            </div>
+        </div>
+    </header>
+    
+    <section id="home" class="bg-cover bg-center min-h-screen flex items-center justify-center fade-in" style="background-image: url('https://media.licdn.com/dms/image/v2/D4D12AQGnuhVYz7cvmw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1683635898102?e=2147483647&v=beta&t=LPJniW5LWOS1mR0La_0kgBbgwIV3KrcRzdTap77rsMk');">
+        <div class="container mx-auto text-center text-white slide-up">
+            <h2 class="text-3xl md:text-4xl font-bold mb-2 md:mb-4">Bem-vindo à MTevolution</h2>
+            <p class="text-lg md:text-xl mb-6 md:mb-8">Especialistas em criação de sites e chatbots</p>
+            <a href="#products" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Nossos Produtos</a>
+        </div>
+    </section>
+
+    <!-- Seção Produtos -->
+    <section id="products" class="py-16 bg-gray-100 fade-in">
+        <div class="container mx-auto text-center max-w-screen-xl">
+            <h2 class="text-3xl font-bold mb-8">Nossos Produtos</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg slide-up">
+                    <img src="https://storage.googleapis.com/a1aa/image/V2IkH7DoeoxqZS9ARsdYZJYhQx32E1QL48EIWOq7bJAgyK3JA.jpg" alt="Imagem de um sistema de inteligência artificial" class="mb-4 rounded"/>
+                    <h3 class="text-2xl font-bold mb-2">Afria Inteligência Artificial</h3>
+                    <p>Soluções de IA personalizadas para atender às necessidades da sua empresa.</p>
+                    <a href="https://wa.me/258845508884" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-block mt-4">Contactar no WhatsApp</a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg slide-up">
+                    <img src="https://storage.googleapis.com/a1aa/image/xr3epfiIfwdleTWb6YxJWUfFsiMfJw4HJTreqwzoJo0LhyK3JA.jpg" alt="Imagem de uma interface de API de IA" class="mb-4 rounded"/>
+                    <h3 class="text-2xl font-bold mb-2">API IA</h3>
+                    <p>APIs de inteligência artificial para integrar em seus sistemas e aplicativos.</p>
+                    <a href="https://wa.me/258845508884" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-block mt-4">Contactar no WhatsApp</a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg slide-up">
+                    <img src="https://storage.googleapis.com/a1aa/image/wfL7R1zIuQXoL6IByj2Tkp8b2WX1TITdECop3FS38eHElVuTA.jpg" alt="Imagem de um bot criador para Telegram" class="mb-4 rounded"/>
+                    <h3 class="text-2xl font-bold mb-2">Bot Criator Telegram</h3>
+                    <p>Ferramenta para criar e gerenciar bots no Telegram de forma fácil e eficiente.</p>
+                    <a href="https://wa.me/258845508884" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-block mt-4">Contactar no WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Serviços -->
+    <section id="services" class="py-16 bg-white fade-in">
+        <div class="container mx-auto text-center max-w-screen-xl">
+            <h2 class="text-3xl font-bold mb-8">Nossos Serviços</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg slide-up">
+                    <i class="fas fa-laptop-code text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-2">Criação de Sites</h3>
+                    <p>Desenvolvemos sites modernos e responsivos para sua empresa.</p>
+                    <a href="https://wa.me/258845508884" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-block mt-4">Contactar no WhatsApp</a>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg slide-up">
+                    <i class="fas fa-robot text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-2">Desenvolvimento de Chatbots</h3>
+                    <p>Criamos chatbots inteligentes para melhorar a comunicação com seus clientes.</p>
+                    <a href="https://wa.me/258845508884" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-block mt-4">Contactar no WhatsApp</a>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg slide-up">
+                    <i class="fas fa-cogs text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-2">Consultoria Técnica</h3>
+                    <p>Oferecemos consultoria técnica para otimizar seus processos digitais.</p>
+                    <a href="https://wa.me/258845508884" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-block mt-4">Contactar no WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact" class="py-10 md:py-16 bg-white fade-in">
+        <div class="container mx-auto text-center max-w-screen-md">
+            <h2 class="text-2xl md:text-3xl font-bold mb-6 md:mb-8">Contato</h2>
+            <form class="max-w-lg mx-auto slide-up">
+                <div class="mb-4">
+                    <label for="name" class="block text-left text-gray-700">Nome</label>
+                    <input type="text" id="name" placeholder="Seu nome" class="w-full px-4 py-2 border rounded-lg"/>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-left text-gray-700">Email</label>
+                    <input type="email" id="email" placeholder="Seu email" class="w-full px-4 py-2 border rounded-lg"/>
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-left text-gray-700">Mensagem</label>
+                    <textarea id="message" placeholder="Sua mensagem" rows="4" class="w-full px-4 py-2 border rounded-lg"></textarea>
+                </div>
+                <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-blue-600 text-white py-4 fade-in">
+        <div class="container mx-auto text-center max-w-screen-xl">
+            <p>&copy; 2024 MTevolution. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+
+    <!-- JavaScript para o Popup de Menu Mobile -->
+    <script>
+        function togglePopup() {
+            const popupMenu = document.getElementById("popupMenu");
+            popupMenu.style.display = popupMenu.style.display === "block" ? "none" : "block";
+        }
+    </script>
+</body>
+</html>
